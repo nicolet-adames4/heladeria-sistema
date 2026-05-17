@@ -2,6 +2,8 @@ using Dapper;
 using Microsoft.Data.Sqlite;
 using Heladeria.Models;
 
+// Clase que maneja la conexion a SQLite y todas las consultas con Dapper
+
 namespace Heladeria;
 
 public static class Database
@@ -10,8 +12,7 @@ public static class Database
 
     public static SqliteConnection Conectar() => new(Conexion);
 
-    // ── Crear tablas y datos de ejemplo ──────────────────────────────────
-    public static void Inicializar()
+       public static void Inicializar()
     {
         using var db = Conectar();
 
