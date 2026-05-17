@@ -28,7 +28,7 @@ while (!salir)
         case "4": RegistrarVenta();    break;
         case "5": VerVentas();         break;
         case "6": ReporteMensual();    break;
-        case "7": salir = true;        break;
+        case "75": salir = true;        break;
         default:
             Console.WriteLine("Opcion invalida.");
             break;
@@ -109,8 +109,9 @@ void ActualizarPrecios()
     Database.ActualizarPrecios(id, compra, venta);
     Console.WriteLine("Precios actualizados.");
 }
-
+// Modulo de ventas: permite registrar productos vendidos y calcular el total
 void RegistrarVenta()
+
 {
     Console.Clear();
     Console.WriteLine("\n--- REGISTRAR VENTA ---\n");
